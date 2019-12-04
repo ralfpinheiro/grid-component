@@ -1,19 +1,15 @@
-import styled from 'styled-components';
-import px2vw from '../utils/px2vw';
+import React from 'react';
+import { Container, Box, BoxTitle, BoxText } from './HomeStyles';
 
-export const Container = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: ${px2vw(32)};
-    max-width: 100%;
-
-    @media(min-width: 1024px) {
-        flex-wrap: nowrap;
-    }
-`;
-
-export const Box = styled.div`
-display: flex;
-width: ${px2vw}
-`;
+export default function({ boxData }) {
+    return (
+        <Container>
+      {boxData.map(box => (
+        <Box key={box.id} bgColor={box.bgColor}>
+          <BoxTitle>{box.title}</BoxTitle>
+          <BoxText>{box.text}</BoxText>
+        </Box>
+      ))}
+    </Container>
+    );
+}
