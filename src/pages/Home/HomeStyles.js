@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import px2vw from '../utils/px2vw';
+import px2vw from '../../utils/px2vw';
 
 export const Container = styled.div`
     display: flex;
@@ -16,30 +16,32 @@ export const Container = styled.div`
 export const Box = styled.div`
     display: flex;
     width: ${px2vw(320, 320)};
-    min-height: ${px2vw(200, 320)};
     flex-direction: column;
-    padding: ${px2vw(20)};
+    padding: ${px2vw(40)};
     margin: ${px2vw(20)};
-    background-color: ${props => props.bgcolor};
+    background-color: ${props => props.bgColor};
 `;
 
-export const BoxTitle = style.h3`
+export const BoxTitle = styled.h3`
     color: #333;
     font-size: 2rem;
     text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
 
     @media(min-width: 1024px) {
         font-size: 1.5rem;
     }
 `;
 
-export const BoxText = style.p`
-margin-top: ${px2vw(20)};
-color: #505050;
-font-size: 1.5rem;
+export const BoxText = styled.p`
+    margin-top: ${px2vw(20)};
+    color: #505050;
+    font-size: 1.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
 
-@media(min-width: 1024px) {
-    font-size: 1rem;
+    @media(min-width: 1024px) {
+        font-size: 1rem;
 
-}
+    }
 `;

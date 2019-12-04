@@ -1,25 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Global from './styles/global';
+import Home from './pages/Home/Home';
+import './index.css';
+
+
+const lorem = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, sed iure blanditiis voluptatum nulla quidem minus quam tempora obcaecati necessitatibus inventore! Vitae totam quam pariatur facilis fugit maxime adipisci eaque.';
+
+const data = [
+  {
+    id: Math.random(),
+    title: 'Box Header 1',
+    text: lorem,
+    bgColor: '#D5CAFA'
+  },
+  {
+    id: Math.random(),
+    title: 'Box Header 2',
+    text: lorem,
+    bgColor: '#EDA9A9'
+  },
+  {
+    id: Math.random(),
+    title: 'Box Header 3',
+    text: lorem,
+    bgColor: '#F2EE8D'
+  },
+  {
+    id: Math.random(),
+    title: 'Box Header 4',
+    text: lorem,
+    bgColor: '#9FEACD'
+  }
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Global />
+      <Home boxData={data} />
+    </>
   );
 }
 
