@@ -9,7 +9,7 @@ export const Container = styled.div`
     max-width: 100%;
 
     @media(min-width: 1024px) {
-        flex-wrap: nowrap;
+        flex-wrap: ;
     }
 `;
 
@@ -20,6 +20,14 @@ export const Box = styled.div`
     padding: ${px2vw(40)};
     margin: ${px2vw(20)};
     background-color: ${props => props.bgColor};
+
+    @media(min-width: 768px) {
+        width: calc(50% - 60px);
+    }
+
+    @media(min-width: 1024px) {
+        width: calc(25% - 60px);
+    }
 `;
 
 export const BoxTitle = styled.h3`
@@ -27,7 +35,6 @@ export const BoxTitle = styled.h3`
     font-size: 2rem;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
 
     @media(min-width: 1024px) {
         font-size: 1.5rem;
@@ -38,7 +45,6 @@ export const BoxText = styled.p`
     margin-top: ${px2vw(20)};
     color: #505050;
     font-size: 1.5rem;
-    font-family: 'Source Sans Pro', sans-serif;
 
     @media(min-width: 1024px) {
         font-size: 1rem;
