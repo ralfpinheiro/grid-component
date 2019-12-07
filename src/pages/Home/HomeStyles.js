@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import px2vw from '../../utils/px2vw';
 
 export const Container = styled.div`
@@ -42,12 +42,36 @@ export const BoxTitle = styled.h3`
 `;
 
 export const BoxText = styled.p`
-    margin-top: ${px2vw(20)};
+    margin: ${px2vw(20)};
     color: #505050;
     font-size: 1.5rem;
+    text-align: center;
 
     @media(min-width: 1024px) {
         font-size: 1rem;
-
     }
+`;
+
+export const Button = styled.button`
+background: transparent;
+  border-radius: 3px;
+  border: 2px solid white;
+  color: white;
+  margin: 0 1em;
+  padding: 1em 1em;
+  margin: 12px auto;
+  cursor: pointer;
+  width: ${px2vw(320)};
+
+  @media(min-width: 1024px) {
+    font-size: 1rem;
+    width: ${px2vw(200)};
+}
+
+  ${props => 
+    props.primary && 
+    css`
+        background: white;
+        color: black;    
+        `};
 `;
