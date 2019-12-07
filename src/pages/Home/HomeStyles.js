@@ -53,25 +53,37 @@ export const BoxText = styled.p`
 `;
 
 export const Button = styled.button`
-background: transparent;
-  border-radius: 3px;
-  border: 2px solid white;
-  color: white;
-  margin: 0 1em;
-  padding: 1em 1em;
-  margin: 12px auto;
-  cursor: pointer;
-  width: ${px2vw(320)};
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid white;
+    color: white;
+    margin: 0 1em;
+    padding: 1em 1em;
+    margin: 12px auto;
+    cursor: pointer;
+    width: ${px2vw(320)};
+    transition: all .2s ease;
 
-  @media(min-width: 1024px) {
-    font-size: 1rem;
-    width: ${px2vw(200)};
+    &:hover {
+        background: white;
+        color: black;
+    }
+
+    @media(min-width: 1024px) {
+        font-size: 1rem;
+        width: ${px2vw(200)};
 }
 
   ${props => 
-    props.primary && 
-    css`
-        background: white;
-        color: black;    
-        `};
+    props.primary && css`
+    background: white;
+    color: black;   
+    
+    &:hover {
+        background: black;
+        color: white;
+        border: 2px solid black;
+    }
+    
+    `};
 `;
