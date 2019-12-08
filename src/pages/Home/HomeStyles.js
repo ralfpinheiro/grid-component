@@ -54,7 +54,7 @@ export const Box = styled.div`
     }
 
     @media(min-width: 1300px) {
-        width: calc(25% - 60px);
+        width: calc(25% - 40px);
     }
 `;
 
@@ -63,6 +63,7 @@ export const BoxTitle = styled.h3`
     font-size: 2.2rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    margin: ${px2vw(20)};
 
     @media(min-width: 1024px) {
         font-size: 1.8rem;
@@ -70,10 +71,13 @@ export const BoxTitle = styled.h3`
 `;
 
 export const BoxText = styled.p`
-    margin: ${px2vw(20)};
+    margin: ${px2vw(20)} auto ${px2vw(20)} auto;
     color: #505050;
     font-size: 1.5rem;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    max-width: 400px;
 
     @media(min-width: 1024px) {
         font-size: 1rem;
@@ -87,10 +91,12 @@ export const Button = styled.button`
     color: white;
     margin: 0 1em;
     padding: 1em 1em;
-    margin: 12px auto;
+    margin: 20px auto;
     cursor: pointer;
     width: ${px2vw(320)};
     transition: all .2s ease;
+    font-size: 1.2rem;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.15);
 
     &:hover {
         background: white;
@@ -98,7 +104,6 @@ export const Button = styled.button`
     }
 
     @media(min-width: 1024px) {
-        font-size: 1rem;
         width: ${px2vw(200)};
 }
 
@@ -106,6 +111,7 @@ export const Button = styled.button`
     props.primary && css`
     background: white;
     color: #505050;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.1);
     
     &:hover {
         background: #505050;;
