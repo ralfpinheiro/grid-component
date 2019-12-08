@@ -1,11 +1,26 @@
 import styled, { css } from 'styled-components';
 import px2vw from '../../utils/px2vw';
 
+export const Section = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background: #f9f9f9;
+`;
+
 export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: strecth;
+    justify-content: space-evenly;
     margin: ${px2vw(32)};
+    height: 100%;
     max-width: 100%;
 
     @media(min-width: 1024px) {
@@ -13,31 +28,44 @@ export const Container = styled.div`
     }
 `;
 
+export const PageHeading = styled.h1`
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    margin: ${px2vw(60)};
+    color: #505050;
+    font-weight: 800;
+    text-align: center;
+
+`;
+
 export const Box = styled.div`
     display: flex;
     width: ${px2vw(320, 320)};
     flex-direction: column;
+    justify-content: space-around;
     padding: ${px2vw(40)};
-    margin: ${px2vw(20)};
+    margin: ${px2vw(10)};
+    border-radius: ${px2vw(4)};
     background-color: ${props => props.bgColor};
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 
     @media(min-width: 768px) {
         width: calc(50% - 60px);
     }
 
-    @media(min-width: 1024px) {
+    @media(min-width: 1300px) {
         width: calc(25% - 60px);
     }
 `;
 
 export const BoxTitle = styled.h3`
-    color: #333;
-    font-size: 2rem;
+    color: #505050;
+    font-size: 2.2rem;
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
     @media(min-width: 1024px) {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 `;
 
@@ -66,7 +94,7 @@ export const Button = styled.button`
 
     &:hover {
         background: white;
-        color: black;
+        color: #505050;
     }
 
     @media(min-width: 1024px) {
@@ -77,12 +105,12 @@ export const Button = styled.button`
   ${props => 
     props.primary && css`
     background: white;
-    color: black;   
+    color: #505050;
     
     &:hover {
-        background: black;
+        background: #505050;;
         color: white;
-        border: 2px solid black;
+        border: 2px solid #505050;
     }
     
     `};
