@@ -10,7 +10,7 @@ export const Section = styled.div`
     min-height: 100vh;
     margin: 0;
     padding: 100px 20px 20px 20px;
-    background: #f3f3f3;
+    background: #eaeaea;
 `;
 
 export const Container = styled.div`
@@ -112,9 +112,9 @@ export const Button = styled.button`
     color: #fff;
     
     &:hover {
-        background: #3ecf8e;;
+        background: #fdcb6e;;
         color: white;
-        border: 2px solid #3ecf8e;
+        border: 2px solid #fdcb6e;
     }
     
     `};

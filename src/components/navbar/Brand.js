@@ -18,6 +18,11 @@ const LogoCenter = styled.div`
     background-color: #525f7f;
     box-shadow: 0px -1px 8px 2px rgba(0,0,0,0.2);
 
+    @media(max-width: 768px) {
+        width: 12px;
+        height: 12px;
+    }
+
 `;
 
 const Logo = styled.div`
@@ -25,13 +30,18 @@ const Logo = styled.div`
     align-items: center;
     justify-content: center;
     align-self: center;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background: linear-gradient(-45deg, #fdcb6e, #fdb86e, #fda76e, #fdc66e, #fdd96e, #fdde6e);
 	background-size: 400% 400%;
     animation: gradientBG 8s ease infinite;
     box-shadow: 0px -1px 8px 2px rgba(253,203,110,0.3);
+
+    @media(max-width: 768px) {
+        width: 35px;
+        height: 35px;
+    }
 
 }
 

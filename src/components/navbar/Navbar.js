@@ -64,7 +64,11 @@ const FlexContainer = styled.div`
     margin: auto;
     padding: 0 2rem;
     justify-content: space-between;
-    height: 5.5rem;
+    height: 80px;
+
+    @media(max-width: 768px) {
+        height: 55px;
+    }
 `;
 
 const NavLinks = styled(animated.ul)`
@@ -83,8 +87,8 @@ const NavLinks = styled(animated.ul)`
         cursor: pointer;
 
         &:hover {
-            color: #3ecf8e;
-            border-bottom: 1px solid #3ecf8e;
+            color: #fdcb6e;
+            border-bottom: 2px solid #fdcb6e;
         }
 
         @media (max-width: 768px) {
