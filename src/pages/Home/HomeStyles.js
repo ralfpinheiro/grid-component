@@ -9,7 +9,7 @@ export const Section = styled.div`
     max-width: 100%;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
     background: #f3f3f3;
 `;
 
@@ -35,7 +35,6 @@ export const PageHeading = styled.h1`
     color: #525f7f;
     font-weight: 800;
     text-align: center;
-
 `;
 
 export const Box = styled.div`
@@ -59,7 +58,7 @@ export const Box = styled.div`
 `;
 
 export const BoxTitle = styled.h3`
-    color: #3ecf8e;
+    color: #fdcb6e;
     font-size: 2.2rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -93,7 +92,7 @@ export const Button = styled.button`
     padding: 1em 1em;
     margin: 20px auto;
     cursor: pointer;
-    width: ${px2vw(320)};
+    max-width: ${px2vw(300)};
     transition: all .2s ease;
     font-size: 1.2rem;
     
@@ -103,7 +102,8 @@ export const Button = styled.button`
     }
 
     @media(min-width: 1024px) {
-        width: ${px2vw(200)};
+        max-width: ${px2vw(200)};
+        font-size: 1.1rem;
 }
 
   ${props => 

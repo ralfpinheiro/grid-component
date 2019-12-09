@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from '../../components/header/Header';
 import { Container, Box, BoxTitle, BoxText, Button, PageHeading, Section } from './HomeStyles';
 
 export default function({ boxData }) {
     return (
+        <div>
+        <Header></Header>
         <Section>
             <PageHeading>Grid Component</PageHeading>
             <Container>
@@ -16,5 +19,6 @@ export default function({ boxData }) {
                 ))}
             </Container>
         </Section>
+        </div>
     );
 }
