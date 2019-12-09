@@ -1,16 +1,49 @@
 import React from 'react'
 import styled from "styled-components";
-import logo from "../../assets/logo-min.png";
 
 const Brand = () => {
     return (
-        <Image src={logo} alt="Logo" />
+        <Logo>
+            <LogoCenter />
+        </Logo>
     )
 }
 
 export default Brand;
 
-const Image = styled.img`
-    height: 65%;
-    margin: auto 0;
+const LogoCenter = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #525f7f;
+    box-shadow: 0px -1px 8px 2px rgba(0,0,0,0.2);
+
+`;
+
+const Logo = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #fdcb6e, #fdb86e, #fda76e, #fdc66e, #fdd96e, #fdde6e);
+	background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    box-shadow: 0px -1px 8px 2px rgba(253,203,110,0.3);
+
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 `;

@@ -39,11 +39,11 @@ export const PageHeading = styled.h1`
 
 export const Box = styled.div`
     display: flex;
-    width: ${px2vw(320, 320)};
+    width: ${px2vw(240, 320)};
     flex-direction: column;
     justify-content: space-around;
     padding: ${px2vw(40)};
-    margin: ${px2vw(12)};
+    margin: 12px;
     border-radius: ${px2vw(4)};
     background-color: ${props => props.bgColor};
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
@@ -72,7 +72,7 @@ export const BoxTitle = styled.h3`
 export const BoxText = styled.p`
     margin: ${px2vw(10)} auto ${px2vw(20)} auto;
     color: #525f7f;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
